@@ -336,7 +336,7 @@ function getEntityMarkup(
     return `<img src="${entity.data.src}" alt="${entity.data.alt}" style="float:${entity.data.alignment || 'none'};height: ${entity.data.height};width: ${entity.data.width}"/>`;
   }
   if (entity.type === 'VIDEO') {
-    return `<video ${entity.data.controls ? 'controls' : ''} style="float:${entity.data.alignment || 'none'};height: ${entity.data.height};width: ${entity.data.width}"><source src="${entity.data.src}" /></video>`;
+    return `<video ${entity.data.controls ? 'controls="controls"' : ''} style="float:${entity.data.alignment || 'none'};height: ${entity.data.height};width: ${entity.data.width}"><source src="${entity.data.src}" /></video>`;
   }
   if (entity.type === 'EMBEDDED_LINK') {
     return `<iframe width="${entity.data.width}" height="${entity.data.height}" src="${entity.data.src}" frameBorder="0"></iframe>`;
